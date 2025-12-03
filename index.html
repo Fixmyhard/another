@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset='UTF-8' />
-<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5'
-  name='viewport' />
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport' />
 <meta content='IE=edge' http-equiv='X-UA-Compatible' />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +45,7 @@
       <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker3" />
     </div>
 
-    <div class="kumpulanwp" class="sembunyi">
+    <div class="kumpulanwp sembunyi">
       <img src="https://feeldreams.github.io/papjalan.jpeg" id="wallpaper2" />
       <img src="https://feeldreams.github.io/papjalan3.jpeg" id="wallpaper3" />
       <img src="https://feeldreams.github.io/paplalulintas4.jpeg" id="wallpaper4" />
@@ -55,11 +54,8 @@
     <div>
       <div id='pergeseran'>
         <p><b><span>hai fransiskaaa cuuuw</span></b></p>
-
         <p><b><span>aku mau ngomong sesuatu<br></span></b></p>
-
         <p><b><span>hehe<br>bacaaaa yakk</span></b></p>
-
         <p><b><span>pencet ini dulu ya 👉💌</span></b></p>
       </div>
     </div>
@@ -68,28 +64,65 @@
 
     <div>
       <blockquote id='bq'>
-        <p id="kalimat">
-          ika... aku minta maaf sedalam-dalamnya untuk segala hal yang pernah aku lakukan di masa lalu.<br><br>
-          mungkin dulu aku belum cukup dewasa buat ngerti perasaanmu sepenuhnya, dan banyak hal yang harusnya bisa aku
-          jaga tapi malah aku sia-siakan.<br><br>
-          aku nyesel, bukan karena aku kehilangan sesuatu, tapi karena aku pernah bikin hati kamu terluka, hati
-          seseorang yang begitu tulus sayang sama aku.<br><br>
-          aku ga akan pernah bisa menghapus masa lalu, tapi aku mau belajar dari semuanya... supaya aku bisa jadi orang
-          yang lebih baik buat kamu.
-        </p>
-
-        <p id="pesanAkhir">ika...,aku tau kamu udah ga percaya kata-kata aku lagi, tapi aku pengen buktiin, aku ingin
-          tetap ada di sisi kamu, aku pengen jadi tempat cerita kamu, tempat singgah sementara kamu, dan mungkin teman
-          hidup kamu. terima kasih. aku sayang kamu, selalu. 🤍</p>
+        <p id="kalimat"></p>
+        <p id="pesanAkhir"></p>
       </blockquote>
     </div>
 
   </div>
 
   <script>
-    const body = document.querySelector("body"); const iniwp = []; iden = 1; iniwp[1] = wallpaper.src; iniwp[2] = wallpaper2.src; iniwp[3] = wallpaper3.src; iniwp[4] = wallpaper4.src; katakata = kalimat.innerHTML; pesanAkhir2 = pesanAkhir.innerHTML; kalimat.innerHTML = ""; pesanAkhir.innerHTML = ""; const swalst = Swal.mixin({ timer: 2500, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90, }); audio = new Audio('' + linkmp3.src); ftganti = 0; fungsi = 0; fungsiAwal = 0; deffotostiker = fotostiker.src; function berjatuhan() { const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90) + "vw"; heart.style.animationDuration = (Math.random() * 3) + 2 + "s"; body.appendChild(heart); } setInterval(function name(params) { var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) { heartArr[0].remove() } }, 100); Content.style = "opacity:1;margin-top:14vh"; const swals = Swal.mixin({ allowOutsideClick: false, cancelButtonColor: '#FF0040', imageHeight: 80, });
+    const body = document.querySelector("body");
+    const iniwp = [];
+    iden = 1;
+    iniwp[1] = wallpaper.src;
+    iniwp[2] = wallpaper2.src;
+    iniwp[3] = wallpaper3.src;
+    iniwp[4] = wallpaper4.src;
+
+    // --- PERUBAHAN UTAMA DI SINI ---
+    // Teks dimasukkan langsung ke variabel JavaScript supaya tidak error saat diformat
+    katakata = "ika... aku minta maaf sedalam-dalamnya untuk segala hal yang pernah aku lakukan di masa lalu.<br><br>dulu aku belum cukup dewasa buat ngerti perasaanmu sepenuhnya, dan banyak hal yang harusnya bisa aku jaga tapi malah aku sia-siakan.<br><br>aku nyesel, bukan karena aku kehilangan sesuatu, tapi karena aku pernah bikin hati kamu terluka, hati seseorang yang begitu tulus sayang sama aku.<br><br>aku ga akan pernah bisa menghapus masa lalu, tapi aku mau belajar dari semuanya... supaya aku bisa jadi orang yang lebih baik buat kamu.";
+    
+    pesanAkhir2 = "ika..., aku tau kamu udah ga percaya kata-kata aku lagi, tapi aku pengen buktiin, aku ingin tetap ada di sisi kamu, aku pengen jadi tempat cerita kamu, tempat singgah sementara kamu, dan mungkin teman hidup kamu. terima kasih. aku sayang kamu, selalu. 🤍";
+    // --------------------------------
+
+    kalimat.innerHTML = "";
+    pesanAkhir.innerHTML = "";
+    
+    const swalst = Swal.mixin({
+      timer: 2500,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90,
+    });
+    audio = new Audio('' + linkmp3.src);
+    ftganti = 0;
+    fungsi = 0;
+    fungsiAwal = 0;
+    deffotostiker = fotostiker.src;
+
+    function berjatuhan() {
+      const heart = document.createElement("div");
+      heart.className = "fas fa-heart";
+      heart.style.left = (Math.random() * 90) + "vw";
+      heart.style.animationDuration = (Math.random() * 3) + 2 + "s";
+      body.appendChild(heart);
+    }
+    setInterval(function name(params) {
+      var heartArr = document.querySelectorAll(".fa-heart");
+      if (heartArr.length > 100) {
+        heartArr[0].remove()
+      }
+    }, 100);
+    Content.style = "opacity:1;margin-top:14vh";
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: '#FF0040',
+      imageHeight: 80,
+    });
   </script>
   <script src="https://feeldreams.github.io/dibacadong/script.js"></script>
 </body>
-
 </html>
